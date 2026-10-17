@@ -27,7 +27,7 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line/80 bg-cream/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-white/40 bg-cream/40 bg-clip-padding shadow-[0_1px_0_0_rgba(255,255,255,0.5)_inset,0_8px_24px_-12px_rgba(0,0,0,0.15)] backdrop-blur-xl backdrop-saturate-150 supports-[backdrop-filter]:bg-cream/30">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link
           href="/"
@@ -55,8 +55,8 @@ export function SiteHeader() {
                 aria-current={active ? "page" : undefined}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                   active
-                    ? "bg-accent-soft text-accent-dark"
-                    : "text-ink-soft hover:bg-cream-100 hover:text-ink"
+                    ? "bg-accent-soft/80 text-accent-dark backdrop-blur-sm"
+                    : "text-ink-soft hover:bg-white/40 hover:text-ink"
                 }`}
               >
                 {link.label}
@@ -69,7 +69,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={openCart}
-            className="relative flex items-center gap-2 rounded-full border border-line bg-cream-100 px-3.5 py-2 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent-dark"
+            className="relative flex items-center gap-2 rounded-full border border-white/50 bg-white/40 px-3.5 py-2 text-sm font-semibold text-ink shadow-sm backdrop-blur-sm transition-colors hover:border-accent/60 hover:bg-white/60 hover:text-accent-dark"
             aria-label={`Open cart, ${itemCount} ${itemCount === 1 ? "item" : "items"}`}
           >
             <CartLargeIcon className="h-5 w-5" />
@@ -78,7 +78,7 @@ export function SiteHeader() {
               className={`grid h-5 min-w-5 place-items-center rounded-full px-1 text-xs font-semibold ${
                 itemCount > 0
                   ? "bg-accent text-cream"
-                  : "bg-cream-200 text-muted"
+                  : "bg-cream-200/80 text-muted"
               }`}
             >
               {itemCount}
@@ -91,7 +91,7 @@ export function SiteHeader() {
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             aria-label="Toggle navigation menu"
-            className="grid h-10 w-10 place-items-center rounded-full border border-line bg-cream-100 text-ink md:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-white/50 bg-white/40 text-ink backdrop-blur-sm md:hidden"
           >
             {menuOpen ? (
               <CloseIcon className="h-5 w-5" />
@@ -106,9 +106,9 @@ export function SiteHeader() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="border-t border-line bg-cream px-4 pb-4 md:hidden"
+          className="border-t border-white/30 bg-cream/60 backdrop-blur-xl md:hidden"
         >
-          <ul className="flex flex-col gap-1 pt-3">
+          <ul className="flex flex-col gap-1 px-4 pt-3 pb-4">
             {NAV_LINKS.map((link) => {
               const active = isActive(pathname, link.href);
               return (
@@ -119,8 +119,8 @@ export function SiteHeader() {
                     aria-current={active ? "page" : undefined}
                     className={`block rounded-xl px-4 py-3 text-base font-medium ${
                       active
-                        ? "bg-accent-soft text-accent-dark"
-                        : "text-ink-soft hover:bg-cream-100"
+                        ? "bg-accent-soft/80 text-accent-dark"
+                        : "text-ink-soft hover:bg-white/50"
                     }`}
                   >
                     {link.label}

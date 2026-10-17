@@ -1,4 +1,3 @@
-import { ArrowRightIcon } from "@solar-icons/react/bold-duotone/arrow-right";
 import Link from "next/link";
 
 import { HeroSection } from "@/components/hero-section";
@@ -34,12 +33,12 @@ export default function HomePage() {
       >
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="eyebrow">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-dark">
               From the kitchen
             </p>
             <h2
               id="featured-heading"
-              className="mt-2 heading-2"
+              className="mt-2 font-display text-3xl font-semibold sm:text-4xl"
             >
               Featured dishes
             </h2>
@@ -49,7 +48,18 @@ export default function HomePage() {
             className="inline-flex items-center gap-2 text-sm font-semibold text-accent-dark hover:underline"
           >
             See the full menu
-            <ArrowRightIcon className="h-4 w-4" />
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
           </Link>
         </div>
 
@@ -59,7 +69,8 @@ export default function HomePage() {
           ))}
         </div>
         <p className="mt-6 text-xs text-muted">
-          Prices are in Philippine pesos (PHP).
+          Menu items and prices are sample demo content in Philippine pesos
+          (PHP).
         </p>
       </section>
 
@@ -78,20 +89,24 @@ export default function HomePage() {
             />
           </div>
           <div>
-            <p className="eyebrow">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-dark">
               Our little kitchen
             </p>
             <h2
               id="about-heading"
-              className="mt-2 heading-2"
+              className="mt-2 font-display text-3xl font-semibold sm:text-4xl"
             >
               Comfort food, cooked the way home tastes
             </h2>
-            <p className="mt-5 body-text text-muted">
-              Bistro PH is a neighborhood kitchen built around familiar
+            <p className="mt-5 text-sm leading-relaxed text-muted sm:text-base">
+              Bistro Lokal is a neighborhood kitchen built around familiar
               Filipino flavors: slow-braised adobo, citrusy inasal, and
               merienda classics worth lingering over. We keep the menu short,
               cook in small batches, and plate everything to share.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+              This story is fictional. The restaurant, its address, and its
+              hours exist only for this portfolio demo.
             </p>
           </div>
         </div>
@@ -103,7 +118,7 @@ export default function HomePage() {
       >
         <h2
           id="how-heading"
-          className="heading-2"
+          className="font-display text-3xl font-semibold sm:text-4xl"
         >
           Ordering takes three steps
         </h2>
@@ -113,13 +128,13 @@ export default function HomePage() {
               key={step.title}
               className="rounded-2xl border border-line bg-cream-100/60 p-6"
             >
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-accent text-sm font-semibold text-cream">
+              <span className="grid h-9 w-9 place-items-center rounded-full bg-accent text-sm font-bold text-cream">
                 {index + 1}
               </span>
-              <h3 className="mt-4 heading-3">
+              <h3 className="mt-4 font-display text-lg font-semibold">
                 {step.title}
               </h3>
-              <p className="mt-2 body-text text-muted">
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 {step.body}
               </p>
             </li>
@@ -136,13 +151,13 @@ export default function HomePage() {
           <div className="md:col-span-2">
             <h2
               id="visit-heading"
-              className="heading-2"
+              className="font-display text-2xl font-semibold sm:text-3xl"
             >
               Visit us
             </h2>
-            <p className="mt-4 max-w-xl body-text text-cream/80">
-              Dine in or pick up at our spot in Davao City. Come by for lunch,
-              or send your order ahead on WhatsApp.
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-cream/80">
+              Dine in or pick up at our  corner spot. Everything
+              below is sample content for the demo.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
@@ -159,27 +174,27 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <dl className="flex flex-col gap-4">
+          <dl className="flex flex-col gap-4 text-sm">
             <div>
-              <dt className="caption-label text-cream/60">
-                Address
+              <dt className="text-xs uppercase tracking-[0.16em] text-cream/60">
+                Address (sample)
               </dt>
               <dd className="mt-1 text-cream/90">
-                Poblacion District
+                12 Kalayaan Street
                 <br />
-                Davao City, 8000 Philippines
+                Barangay Malaya, Quezon City
               </dd>
             </div>
             <div>
-              <dt className="caption-label text-cream/60">
-                Opening hours
+              <dt className="text-xs uppercase tracking-[0.16em] text-cream/60">
+                Opening hours (sample)
               </dt>
               <dd className="mt-1 text-cream/90">
                 Mon–Sun · 10:00 AM – 9:00 PM
               </dd>
             </div>
             <div>
-              <dt className="caption-label text-cream/60">
+              <dt className="text-xs uppercase tracking-[0.16em] text-cream/60">
                 Orders
               </dt>
               <dd className="mt-1 text-cream/90">
