@@ -30,7 +30,7 @@ Read this before planning or writing anything in this repo.
 3. Never collect payment card details or imply online payment is supported.
 4. No dead buttons, fake links, or broken image assets — provide fallbacks.
 5. Never commit `.env.local`, tokens, or service-role keys.
-6. Label menu prices, location, and opening hours as sample/demo content, and keep a "Portfolio demo — fictional restaurant" disclosure visible.
+6. Never invent a real phone number, never claim an order was sent or persisted when it was not, and never imply online payment is supported. Menu prices are shown in Philippine pesos (PHP). Keep `robots: { index: false }` in `app/layout.tsx` unchanged. Do not add a visible "fictional/demo" disclosure — the owner removed it so the site reads as a real restaurant.
 7. **No database.** Order submission is a WhatsApp handoff (`NEXT_PUBLIC_RESTAURANT_WHATSAPP_NUMBER`) plus a browser-local `localStorage` order history. Do not add a database client, an `app/api/orders` route, or any server-side order storage.
 
 ### Editing This File
