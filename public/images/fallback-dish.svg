@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Bistro PH dish placeholder">
+  <rect width="800" height="600" fill="#f3e7d6" />
+  <circle cx="400" cy="268" r="148" fill="#fff8ef" stroke="#d1603d" stroke-width="6" />
+  <circle cx="400" cy="268" r="108" fill="none" stroke="#e7dcc9" stroke-width="4" />
+  <g stroke="#c9b79c" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M250 372 L250 470" />
+    <path d="M236 372 L236 404" />
+    <path d="M264 372 L264 404" />
+    <path d="M550 372 L550 470" />
+    <path d="M536 372 q14 24 0 46" />
+  </g>
+  <text x="400" y="530" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#211c16" letter-spacing="1">
+    Bistro PH
+  </text>
+  <text x="400" y="566" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="18" fill="#726656" letter-spacing="3">
+    IMAGE UNAVAILABLE
+  </text>
+</svg>
